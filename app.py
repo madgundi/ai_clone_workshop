@@ -1,15 +1,15 @@
-import streamlit as st
+__import__('pysqlite3')
 import sys
 sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
-import pysqlite3
 import chromadb
+import streamlit as st
 import numpy as np
+from PyPDF2 import PdfReader
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
 from langchain.memory import ConversationBufferMemory
 from sentence_transformers import SentenceTransformer, util
-from langchain_huggingface import HuggingFaceEmbeddings
-from PyPDF2 import PdfReader
 
 # ✅ Load and Extract Text from PDF
 def load_pdf(file_path):
