@@ -1,9 +1,10 @@
-numpy
-PyPDF2
-langchain
-chromadb
+numpy>=1.21,<1.26
+PyPDF2>=3.0.0
+langchain>=0.1.0
+chromadb>=0.4.0
 langchain-huggingface
-streamlit
+streamlit>=1.20
 groq
-langchain_community
+langchain-community
 langchain-groq
+pysqlite3-binary>=0.5.2  # Ensures SQLite3 is up-to-date
