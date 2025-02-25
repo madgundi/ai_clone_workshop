@@ -1,4 +1,7 @@
 import streamlit as st
+import pysqlite3
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 import chromadb
 import numpy as np
 from langchain_groq import ChatGroq
