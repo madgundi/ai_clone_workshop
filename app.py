@@ -26,7 +26,7 @@ pdf_text = load_pdf(pdf_file_path)
 
 # ✅ Initialize Embedding & ChromaDB
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-chroma_client = chromadb.PersistentClient(path="./chroma_db_4")
+chroma_client = chromadb.PersistentClient(path="./chroma_db")
 collection = chroma_client.get_or_create_collection(name="ai_knowledge_base")
 
 # ✅ Initialize Memory & Chat Model
